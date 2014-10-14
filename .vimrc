@@ -1,6 +1,23 @@
 set nocompatible
 
 execute pathogen#infect()
+"VimClojure
+"ctrlp.vim
+"tcomment_vim
+"vim-airline
+"vim-elixir
+"vim-go
+"vim-jade
+"vim-projectionist
+"vim-rake
+"snipmate.vim
+"tmuxline.vim
+"vim-coffee-script
+"vim-flake8
+"vim-haml
+"vim-pathogen
+"vim-rails
+"vim-surround
 
 syntax enable 
 filetype plugin indent on
