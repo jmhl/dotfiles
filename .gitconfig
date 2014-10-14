@@ -1,0 +1,15 @@
+[user]
+        name = James Haley
+        email = james@wrapp.com
+[color]
+        ui = true
+[alias]
+        co = checkout
+        hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph
+        br = branch
+        st = status
+        type = cat-file -t
+        dump = cat-file -p
+        llog = log --all --graph
+[core]
+        excludesfile = /Users/*/.gitignore
