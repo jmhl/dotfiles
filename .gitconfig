@@ -1,6 +1,6 @@
 [user]
-        name = James Haley
-        email = james@wrapp.com
+        name = ************
+        email = ************
 [color]
         ui = true
 [alias]
@@ -12,4 +12,4 @@
         dump = cat-file -p
         llog = log --all --graph
 [core]
-        excludesfile = /Users/*/.gitignore
+        excludesfile = /Users/************/.gitignore
