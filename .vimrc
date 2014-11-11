@@ -18,6 +18,8 @@ execute pathogen#infect()
 "vim-pathogen
 "vim-rails
 "vim-surround
+"emmet.vim
+"vim-css-color
 
 syntax enable 
 filetype plugin indent on
