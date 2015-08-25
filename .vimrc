@@ -64,10 +64,9 @@ nnoremap <C-H> <C-W><C-H>
 " tcomment
 runtime bundles/tplugin_vim/macros/tplugin.vim
 
-" two spaces for scss/css/rb files
-autocmd FileType scss :setlocal sw=2 ts=2 sts=2
-autocmd FileType css :setlocal sw=2 ts=2 sts=2
-autocmd FileType rb :setlocal sw=2 ts=2 sts=2
+" four spaces for go/py files
+autocmd FileType go :setlocal sw=4 ts=4 sts=4
+autocmd FileType py :setlocal sw=4 ts=4 sts=4
 
 " spell checking and text wrapping for commits
 autocmd Filetype gitcommit setlocal spell textwidth=72
