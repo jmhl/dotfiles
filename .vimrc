@@ -64,9 +64,10 @@ nnoremap <C-H> <C-W><C-H>
 " tcomment
 runtime bundles/tplugin_vim/macros/tplugin.vim
 
-" four spaces for go/py files
-autocmd FileType go :setlocal sw=4 ts=4 sts=4
-autocmd FileType py :setlocal sw=4 ts=4 sts=4
+" four spaces for go that will write to disk as tabs
+au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
+" four spaces for py files
+au Filetype python setl et ts=4 sw=4
 
 " spell checking and text wrapping for commits
 autocmd Filetype gitcommit setlocal spell textwidth=72
@@ -93,11 +94,3 @@ else
     \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
   \ }
 endif
-
-" rails.vim keybindings for working with backbone apps
-autocmd User Rails Rnavcommand template    app/assets/templates               -glob=**/*  -suffix=.jst.ejs
-autocmd User Rails Rnavcommand jmodel      app/assets/javascripts/models      -glob=**/*  -suffix=.coffee
-autocmd User Rails Rnavcommand jview       app/assets/javascripts/views       -glob=**/*  -suffix=.coffee
-autocmd User Rails Rnavcommand jcollection app/assets/javascripts/collections -glob=**/*  -suffix=.coffee
-autocmd User Rails Rnavcommand jrouter     app/assets/javascripts/routers     -glob=**/*  -suffix=.coffee
-autocmd User Rails Rnavcommand jspec       spec/javascripts                   -glob=**/*  -suffix=.coffee
