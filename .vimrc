@@ -99,3 +99,6 @@ endif
 
 " map argwrap to ctrl+a
 nnoremap <C-A> :ArgWrap<CR>
+
+" Don't syntax highlight for super long columns
+set synmaxcol=250
