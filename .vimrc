@@ -26,6 +26,11 @@ execute pathogen#infect()
 "vim-fugitive
 "targets.vim
 "vim-argwrap
+"vim-json
+"vim-racket
+"elm.vim
+"vim-jsx
+"vim-swift
 
 syntax enable
 filetype plugin indent on
