@@ -31,6 +31,7 @@ execute pathogen#infect()
 "elm.vim
 "vim-jsx
 "vim-swift
+"vim-terraform
 
 syntax enable
 filetype plugin indent on
