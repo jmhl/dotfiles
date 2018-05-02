@@ -108,3 +108,10 @@ nnoremap <C-A> :ArgWrap<CR>
 
 " Don't syntax highlight for super long columns
 set synmaxcol=250
+
+" If a .vimrc file exists in a git repo, activate it:
+let git_path = system("git rev-parse --show-toplevel 2>/dev/null")
+let git_vimrc = substitute(git_path, '\n', '', '') . "/.vimrc"
+if !empty(glob(git_vimrc))
+  exec ":source " . git_vimrc
+endif
