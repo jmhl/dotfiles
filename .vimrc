@@ -32,6 +32,7 @@ execute pathogen#infect()
 "vim-jsx
 "vim-swift
 "vim-terraform
+"vim-localvimrc
 
 syntax enable
 filetype plugin indent on
@@ -109,9 +110,9 @@ nnoremap <C-A> :ArgWrap<CR>
 " Don't syntax highlight for super long columns
 set synmaxcol=250
 
-" If a .vimrc file exists in a git repo, activate it:
-let git_path = system("git rev-parse --show-toplevel 2>/dev/null")
-let git_vimrc = substitute(git_path, '\n', '', '') . "/.vimrc"
-if !empty(glob(git_vimrc))
-  exec ":source " . git_vimrc
-endif
+" Config for vim-localvimrc -- create a .lvimrc file in any directory
+" Don't rum vim-localvimrc in sandbox mode
+let g:localvimrc_sandbox = 0
+" To avoid vim-localvimrc asking for confirmation before loading a local vimrc
+" List of absolute paths to directories contains .lvimrc files
+let g:localvimrc_whitelist=[]
