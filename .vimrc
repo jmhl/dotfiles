@@ -31,6 +31,7 @@ Plug 'prettier/vim-prettier'
 " Install `fzf`
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'embear/vim-localvimrc'
 call plug#end()
 
 syntax enable
@@ -103,4 +104,4 @@ let g:javascript_plugin_jsdoc = 1
 let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 
 let g:localvimrc_sandbox = 0
-let g:localvimrc_whitelist=['/Users/jameshaley/dev/zeus/packages/novaconnect', '/Users/jameshaley/dev/zeus/packages/dashboard', '/Users/jameshaley/dev/zeus/packages/athena', '/Users/jameshaley/dev/zeus/packages/pandorasbox', '/Users/jameshaley/dev/zeus/packages/consumer', '/Users/jameshaley/dev/zeus/packages/tv']
+let g:localvimrc_whitelist=['']
