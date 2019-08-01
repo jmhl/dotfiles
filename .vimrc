@@ -8,7 +8,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-
 Plug 'kien/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tomtom/tlib_vim'
@@ -32,6 +31,7 @@ Plug 'prettier/vim-prettier'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'embear/vim-localvimrc'
+Plug 'ajh17/VimCompletesMe'
 call plug#end()
 
 syntax enable
@@ -71,11 +71,12 @@ nnoremap <C-H> <C-W><C-H>
 " tcomment
 runtime bundles/tplugin_vim/macros/tplugin.vim
 
-" spell checking and text wrapping for commits
+" Spell checking and text wrapping for commits
 autocmd Filetype gitcommit setlocal spell textwidth=72
+" Use Vim Command line completion for all filetypes
+autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
-" use silver searcher for ctrl+p
-" this is just the best
+" Use silver searcher for ctrl+p
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
