@@ -32,6 +32,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'embear/vim-localvimrc'
 Plug 'ajh17/VimCompletesMe'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 syntax enable
