@@ -33,6 +33,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'embear/vim-localvimrc'
 Plug 'ajh17/VimCompletesMe'
 Plug 'leafgarland/typescript-vim'
+Plug 'ElmCast/elm-vim'
 call plug#end()
 
 syntax enable
