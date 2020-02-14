@@ -8,7 +8,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'kien/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tomtom/tlib_vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -28,7 +27,7 @@ Plug 'wellle/targets.vim'
 Plug 'elzr/vim-json'
 Plug 'prettier/vim-prettier'
 " Install `fzf`
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'embear/vim-localvimrc'
 Plug 'ajh17/VimCompletesMe'
@@ -78,18 +77,10 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " Use Vim Command line completion for all filetypes
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
-" Use silver searcher for ctrl+p
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects
-  " .gitignore. Also ignores common directories.
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""  --ignore-dir "bower_components"  --ignore-dir "node_modules"'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
+" Use ctrl + p or ctrl + t to use `fzf`. `GFiles` excludes anything in
+" `.gitignore`
+nnoremap <C-T> :GFiles<cr>
+nnoremap <C-P> :GFiles<cr>
 
 " Don't syntax highlight for super long columns
 set synmaxcol=250
