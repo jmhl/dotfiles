@@ -33,6 +33,8 @@ Plug 'embear/vim-localvimrc'
 Plug 'ajh17/VimCompletesMe'
 Plug 'leafgarland/typescript-vim'
 Plug 'ElmCast/elm-vim'
+Plug 'evanleck/vim-svelte'
+Plug 'leafOfTree/vim-vue-plugin'
 call plug#end()
 
 syntax enable
