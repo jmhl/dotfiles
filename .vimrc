@@ -52,8 +52,8 @@ set backspace=indent,eol,start
 set tabstop=2
 set shiftwidth=2
 
-" use silver searcher
-set grepprg=ag
+" use ripgrep
+set grepprg=rg
 
 " Use tabs for json files too
 " au FileType json setl sw=2 sts=2 et
