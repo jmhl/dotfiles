@@ -31,6 +31,8 @@ Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'embear/vim-localvimrc'
 Plug 'ajh17/VimCompletesMe'
+" TypeScript-related plugins
+Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
 Plug 'ElmCast/elm-vim'
 Plug 'evanleck/vim-svelte'
