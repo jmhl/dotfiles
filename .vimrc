@@ -37,6 +37,11 @@ Plug 'leafgarland/typescript-vim'
 Plug 'ElmCast/elm-vim'
 Plug 'evanleck/vim-svelte'
 Plug 'leafOfTree/vim-vue-plugin'
+Plug 'jparise/vim-graphql'
+" Intellisense for vim:
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" After installing, run:
+" :CocInstall coc-json coc-tsserver
 call plug#end()
 
 syntax enable
