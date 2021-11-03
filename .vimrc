@@ -38,6 +38,12 @@ Plug 'ElmCast/elm-vim'
 Plug 'evanleck/vim-svelte'
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'jparise/vim-graphql'
+if has('nvim')
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " -- After installing, run:
+  " -- `:CocInstall coc-json coc-tsserver`
+endif
 call plug#end()
 
 syntax enable
