@@ -1,16 +1,47 @@
 [user]
-        name = ************
-        email = ************
+  name = ************
+  email = ************
+
 [color]
-        ui = true
+  ui = true
+
 [alias]
-        co = checkout
-        hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph
-        br = branch --sort=-committerdate
-        st = status
-        type = cat-file -t
-        dump = cat-file -p
-        llog = log --all --graph
-        linediff = diff --no-index --word-diff
+  commit = commit -n
+  co = checkout
+  hist = log --pretty=format:'%Cblue%h%Creset %ad | %s%d [%an]' --graph
+  br = branch --sort=committerdate
+  st = status
+  type = cat-file -t
+  dump = cat-file -p
+  llog = log --all --graph
+  linediff = diff --no-index --word-diff
+  # Swap branches
+  sw = ! "f () { \
+    QUERY=$1; \
+    if [ -z "${QUERY}" ]; then \
+      git br | fzf | xargs git co; \
+    else \
+      git br | fzf -q $QUERY | xargs git co; \
+    fi \
+  }; f"
+  # Swap branches (include remote branches in fuzzy search)
+  swr = ! "f () { \
+    QUERY=$1; \
+    if [ -z "${QUERY}" ]; then \
+      git br -r | fzf | xargs git co; \
+    else \
+      git br -r | fzf -q $QUERY | xargs git co; \
+    fi \
+  }; f"
+
 [core]
-        excludesfile = /Users/************/.gitignore
+  editor = nvim
+  excludesfile = /Users/************/.gitignore
+
+[pager]
+  branch = false
+  diff = true
+  log = true
+
+[pull]
+  rebase = true
